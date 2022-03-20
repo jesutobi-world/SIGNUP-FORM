@@ -18,31 +18,27 @@
       </div>
       <div class="card-section">
         <button id="premium-button"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
-        <form action="" method="post" id="form" >
+        <form action="./dashboard.html" method="post" id="form" onsubmit="return validate()">
           <div class="icon-input">
             <input  class="" type="text" placeholder="First Name" name="first-name">
-            <i class="fas fa-exclamation-circle failure-icon" ></i>
-            <i class="fas fa-check-circle success-icon"></i>
+            <img src="./icon-error.svg" alt="" id="first-name-icon">
           </div>
-          <h6 class="error"></h6>
+          <h6 id="first-name-error">First Name cannot be empty</h6>
           <div class="icon-input">
             <input  class="" type="text" placeholder="Last Name" name="last-name">
-            <i class="fas fa-exclamation-circle failure-icon" ></i>
-            <i class="fas fa-check-circle success-icon"></i>
+            <img src="./icon-error.svg" alt="" id="last-name-icon">
           </div>
-          <h6 class="error"></h6>
+          <h6 id="last-name-error">Last Name cannot be empty</h6>
           <div class="icon-input">
             <input  class="" type="email" name="email" id="" placeholder="Email Address">
-            <i class="fas fa-exclamation-circle failure-icon" ></i>
-            <i class="fas fa-check-circle success-icon"></i>
+            <img src="./icon-error.svg" alt="" id="email-icon">
           </div>
-          <h6 class="error"></h6>
+          <h6 id="email-error">Looks like this is not an email</h6>
           <div class="icon-input">
             <input  class="" type="password" name="password" id="" placeholder="Password">
-            <i class="fas fa-exclamation-circle failure-icon" ></i>
-            <i class="fas fa-check-circle success-icon"></i>
+            <img src="./icon-error.svg" alt="" id="password-icon">
           </div>
-          <h6 class="error"></h6>
+          <h6 id="password-error">Password cannot be empty</h6>
           <button type="submit" id="submit">CLAIM YOUR FREE TRIAL</button>
           <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
         </form>
