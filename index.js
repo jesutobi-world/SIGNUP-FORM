@@ -39,6 +39,12 @@ function validate(){
         first_name.focus();
         return false;
     }
+    else{
+        first_name.style.border = '2px solid hsl(154, 59%, 51%)';
+        first_name_error.style.visibility = 'hidden';
+        first_name_icon.visibility = 'hidden';
+        first_name.focus();
+    }
     // validate last name
     if (last_name.value.trim().length == 0){
         last_name.style.border = '2px solid hsl(0, 100%, 74%)';
@@ -62,6 +68,12 @@ function validate(){
         last_name_icon.style.visibility = 'visible';
         last_name.focus();
         return false;
+    }
+    else{
+        last_name.style.border = '2px solid hsl(154, 59%, 51%)';
+        last_name_error.style.visibility = 'hidden';
+        last_name_icon.visibility = 'hidden';
+        last_name.focus();
     }
     // validate password
     if (password.value.trim().length == 0){
@@ -87,8 +99,18 @@ function validate(){
         password.focus();
         return false;
     }
+    else{
+        password.style.border = '2px solid hsl(154, 59%, 51%)';
+        password_error.style.visibility = 'hidden';
+        password_icon.visibility = 'hidden';
+        password.focus();
+    }
     // validate email
     if(email.value.trim().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
+        email.style.border = '2px solid hsl(154, 59%, 51%)';
+        email_error.style.visibility = 'hidden';
+        email_icon.visibility = 'hidden';
+        email.focus();
         return true;
     }
     else {
